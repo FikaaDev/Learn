@@ -1,0 +1,23 @@
+python manage.py runserver 
+
+manage.py =>  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorial.settings') => 'tutorial' is the main app => and we want to open 'settings' by default.
+Inside tutorials.settings => 'INSTALLED_APPS' => There are apps defined which are to be registered into the main API.
+
+The name of the app directly corresponds to the name of the 'folder' ["snippets"] and also 'name' ["snippets"] of the app inside "apps.py" of the "snippet app"
+Define the structure of the model to interact with DB: A model is the single, definitive source of information about your data. 
+	It contains the essential fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+In "admin" inside the web app => register the app from models.
+
+Serialization
+A Serializer transforms model instances into JSON. This the real "magic" that Django Rest Framework provides for us.
+https://www.django-rest-framework.org/api-guide/serializers/#serializers
+
+
+Git
+AWS
+GitLab account
+Django restframework
+
+
+How user model is made?
+How are we able to get "request.user"?

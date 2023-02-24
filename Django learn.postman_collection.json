@@ -1,0 +1,957 @@
+{
+	"info": {
+		"_postman_id": "e45f4f3d-8b25-49fd-8284-fd03c6d609cb",
+		"name": "Django learn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home page",
+			"item": [
+				{
+					"name": "Home page get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/homepage/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"homepage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home page post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Test_Body\": \"Test_Body\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/homepage/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"homepage",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Class Based views",
+					"item": [
+						{
+							"name": "Get all Posts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTQ1MTMzLCJpYXQiOjE2NzcxMzc5MzMsImp0aSI6ImRjOWZhZjdkZGIwYzRiODI5YTQ1NGQ4NjUwYzk5M2Q0IiwidXNlcl9pZCI6Mn0.oHjbFxzBR35zzHLcSk3AyuJsgfIXdWCrTaH5rwuObzo",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedView/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedView",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get post by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewById/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewById",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Craete a post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTQ1MTMzLCJpYXQiOjE2NzcxMzc5MzMsImp0aSI6ImRjOWZhZjdkZGIwYzRiODI5YTQ1NGQ4NjUwYzk5M2Q0IiwidXNlcl9pZCI6Mn0.oHjbFxzBR35zzHLcSk3AyuJsgfIXdWCrTaH5rwuObzo",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"title\" : \"Latest Title\",\r\n\"content\" : \"Content New\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedView/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedView",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update post by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"title\" : \"updated Title via API\",\r\n\"content\" : \"LMAO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewById/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewById",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewById/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewById",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Clas Based postsViewSet Direct method",
+					"item": [
+						{
+							"name": "Get all Posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/postsViewSet",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"postsViewSet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get post by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/postsViewSet/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"postsViewSet",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Craete a post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"title\" : \"Latest Title\",\r\n\"content\" : \"Content New\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/postsViewSet/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"postsViewSet",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Clas Based views using generics and mixins",
+					"item": [
+						{
+							"name": "Get all Posts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTQ1Mjg4LCJpYXQiOjE2NzcxMzgwODgsImp0aSI6IjcwODNjMWU5ZjgzYjQxN2Q5NWE0YzQwM2M3NjkwYjVmIiwidXNlcl9pZCI6Mn0.1tEhvLqWa6RPD258K4eTQQRTXyA9guiOqqdsM7JjAxM",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewGenerics/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewGenerics",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get post by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewGenericsById/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewGenericsById",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Craete a post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTQ1Mjg4LCJpYXQiOjE2NzcxMzgwODgsImp0aSI6IjcwODNjMWU5ZjgzYjQxN2Q5NWE0YzQwM2M3NjkwYjVmIiwidXNlcl9pZCI6Mn0.1tEhvLqWa6RPD258K4eTQQRTXyA9guiOqqdsM7JjAxM",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"title\" : \"Latest Title\",\r\n\"content\" : \"Content New\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewGenerics/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewGenerics",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update post by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"title\" : \"updated Title via API\",\r\n\"content\" : \"LMAO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewGenericsById/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewGenericsById",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/posts/classBasedViewGenericsById/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"posts",
+										"classBasedViewGenericsById",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\" : \"learn DRF\",\r\n\"content\" : \"Haters gonna hate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a post by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\" : \"updated Title via API\",\r\n\"content\" : \"LMAO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/update/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a post by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\" : \"learn DRF\",\r\n\"content\" : \"Haters gonna hate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/delete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post for current user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTUwNTkxLCJpYXQiOjE2NzcxNDMzOTEsImp0aSI6ImY2Mzk2ZDc3ZGViOTQzOGViYmE0NWQwYTZlMTNmMjI0IiwidXNlcl9pZCI6M30.f3j1OoedGN8z1Q8mnnylcpQlUkYn6B6IxI1oP61jZxs",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/post_for_current_user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"post_for_current_user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post via username in query params",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTUwNTkxLCJpYXQiOjE2NzcxNDMzOTEsImp0aSI6ImY2Mzk2ZDc3ZGViOTQzOGViYmE0NWQwYTZlMTNmMjI0IiwidXNlcl9pZCI6M30.f3j1OoedGN8z1Q8mnnylcpQlUkYn6B6IxI1oP61jZxs",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/post_for/?user_name=newuser2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"post_for",
+								""
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "newuser2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post via username in url",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTUwNTkxLCJpYXQiOjE2NzcxNDMzOTEsImp0aSI6ImY2Mzk2ZDc3ZGViOTQzOGViYmE0NWQwYTZlMTNmMjI0IiwidXNlcl9pZCI6M30.f3j1OoedGN8z1Q8mnnylcpQlUkYn6B6IxI1oP61jZxs",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/post_for/newuser2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"post_for",
+								"newuser2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post for current user with custom pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTUwNTkxLCJpYXQiOjE2NzcxNDMzOTEsImp0aSI6ImY2Mzk2ZDc3ZGViOTQzOGViYmE0NWQwYTZlMTNmMjI0IiwidXNlcl9pZCI6M30.f3j1OoedGN8z1Q8mnnylcpQlUkYn6B6IxI1oP61jZxs",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/posts/classBasedViewGenerics/?page=2&page_size=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"posts",
+								"classBasedViewGenerics",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"new2@gmail.com\",\r\n    \"username\": \"newuser2\",\r\n    \"password\": \"password2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"new2@gmail.com\",\r\n    \"password\": \"password2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"new2@gmail.com\",\r\n    \"password\": \"password2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"new2@gmail.com\",\r\n    \"password\": \"password2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/jwt/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"jwt",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NzIxNjA4OSwiaWF0IjoxNjc3MTI5Njg5LCJqdGkiOiIyOGIxYjQzMjExNjM0ZDUyYmNjNGZjZWZkMDc1MWEzMSIsInVzZXJfaWQiOjV9.R3Kqu9vSFTNqBzppmVeGf6bnBdU9bL_8keJ_uUCKUcQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/jwt/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"jwt",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3MTI5OTg5LCJpYXQiOjE2NzcxMjk2ODksImp0aSI6ImZjOTgxODBjZDM1ZjQzYWJiMWY0NDIyOWMzNzkzYTIzIiwidXNlcl9pZCI6NX0.905l2dPUmbjDB9zIjZCmCAmUKhY6HXDA6oeXmRxR2bk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/jwt/verify/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"jwt",
+								"verify",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
